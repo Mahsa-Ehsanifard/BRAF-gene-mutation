@@ -2,7 +2,6 @@
 BiocManager::install("cBioPortalData")
 library(cBioPortalData)
 data<-data("studiesTable", package = "cBioPortalData")
-head(studiesTable)
 skcm <- cBioDataPack("skcm_tcga", ask = FALSE)
 
 cbio <- cBioPortal() #get the information of cbioportal
