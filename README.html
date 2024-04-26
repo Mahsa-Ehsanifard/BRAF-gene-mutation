@@ -355,14 +355,133 @@ display: none;
 <div id="cbioportal" class="section level1">
 <h1>cBioportal</h1>
 <p><img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTYiIGhlaWdodD0iMjAiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iVmVyc2lvbjogdjYuMC41Ij48dGl0bGU+VmVyc2lvbjogdjYuMC41PC90aXRsZT48ZyBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxyZWN0IHdpZHRoPSI1MSIgaGVpZ2h0PSIyMCIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjUxIiB3aWR0aD0iNDUiIGhlaWdodD0iMjAiIGZpbGw9IiMwMDdlYzYiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlZlcmRhbmEsR2VuZXZhLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGZvbnQtc2l6ZT0iMTEwIj48dGV4dCB4PSIyNjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIGZpbGw9IiNmZmYiIHRleHRMZW5ndGg9IjQxMCI+VmVyc2lvbjwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIGZpbGw9IiNmZmYiIHRleHRMZW5ndGg9IjM1MCI+djYuMC41PC90ZXh0PjwvZz48L3N2Zz4=" />
-<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTI2IiBoZWlnaHQ9IjIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlRvdGFsbCBSYW5rOiA5OS45NiUiPjx0aXRsZT5Ub3RhbGwgUmFuazogOTkuOTYlPC90aXRsZT48YSB0YXJnZXQ9Il9ibGFuayIgeGxpbms6aHJlZj0iaHR0cHM6Ly93d3cuY2Jpb3BvcnRhbC5vcmcvIj48ZyBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxyZWN0IHdpZHRoPSI3MyIgaGVpZ2h0PSIyMCIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjczIiB3aWR0aD0iNTMiIGhlaWdodD0iMjAiIGZpbGw9IiM0YzEiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlZlcmRhbmEsR2VuZXZhLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGZvbnQtc2l6ZT0iMTEwIj48dGV4dCB4PSIzNzUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIGZpbGw9IiNmZmYiIHRleHRMZW5ndGg9IjYzMCI+VG90YWxsIFJhbms8L3RleHQ+PHRleHQgeD0iOTg1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiBmaWxsPSIjZmZmIiB0ZXh0TGVuZ3RoPSI0MzAiPjk5Ljk2JTwvdGV4dD48L2c+PC9hPjwvc3ZnPg==" /></p>
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTI2IiBoZWlnaHQ9IjIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlRvdGFsbCBSYW5rOiA5OS45NiUiPjx0aXRsZT5Ub3RhbGwgUmFuazogOTkuOTYlPC90aXRsZT48YSB0YXJnZXQ9Il9ibGFuayIgeGxpbms6aHJlZj0iaHR0cHM6Ly93d3cuY2Jpb3BvcnRhbC5vcmcvIj48ZyBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxyZWN0IHdpZHRoPSI3MyIgaGVpZ2h0PSIyMCIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjczIiB3aWR0aD0iNTMiIGhlaWdodD0iMjAiIGZpbGw9IiM0YzEiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlZlcmRhbmEsR2VuZXZhLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGZvbnQtc2l6ZT0iMTEwIj48dGV4dCB4PSIzNzUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIGZpbGw9IiNmZmYiIHRleHRMZW5ndGg9IjYzMCI+VG90YWxsIFJhbms8L3RleHQ+PHRleHQgeD0iOTg1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiBmaWxsPSIjZmZmIiB0ZXh0TGVuZ3RoPSI0MzAiPjk5Ljk2JTwvdGV4dD48L2c+PC9hPjwvc3ZnPg==" />
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTIyIiBoZWlnaHQ9IjIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ik9wZW4gQWNjZXNzOiAxMDAlIj48dGl0bGU+T3BlbiBBY2Nlc3M6IDEwMCU8L3RpdGxlPjxnIHNoYXBlLXJlbmRlcmluZz0iY3Jpc3BFZGdlcyI+PHJlY3Qgd2lkdGg9Ijc5IiBoZWlnaHQ9IjIwIiBmaWxsPSIjNTU1Ii8+PHJlY3QgeD0iNzkiIHdpZHRoPSI0MyIgaGVpZ2h0PSIyMCIgZmlsbD0iIzk3Y2EwMCIvPjwvZz48ZyBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iVmVyZGFuYSxHZW5ldmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiIgdGV4dC1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiIgZm9udC1zaXplPSIxMTAiPjx0ZXh0IHg9IjQwNSIgeT0iMTQwIiB0cmFuc2Zvcm09InNjYWxlKC4xKSIgZmlsbD0iI2ZmZiIgdGV4dExlbmd0aD0iNjkwIj5PcGVuIEFjY2VzczwvdGV4dD48dGV4dCB4PSI5OTUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIGZpbGw9IiNmZmYiIHRleHRMZW5ndGg9IjMzMCI+MTAwJTwvdGV4dD48L2c+PC9zdmc+" /></p>
 <div id="cbio-cancer-genomics-portal" class="section level2">
 <h2>cBio Cancer Genomics Portal</h2>
 <div id="online-database" class="section level3">
 <h3>Online database</h3>
 <p>Gene mutation data for Cancer Genomics</p>
 <p><a href="https://www.cbioportal.org/" class="uri">https://www.cbioportal.org/</a></p>
+<p>The cBioPortal for Cancer Genomics is a resource for interactive
+exploration of multidimensional cancer genomics data sets. The portal
+supports and stores non-synonymous mutations, DNA copy-number data, mRNA
+and microRNA expression data, protein-level and phosphoprotein level
+data (RPPA or mass spectrometry based), DNA methylation data, and
+de-identified clinical data.</p>
 </div>
+<div id="r-client" class="section level3">
+<h3>R client</h3>
+<p>There are multiple ways to access the API using R.</p>
+<p>One of the recommended R packages to access cBioPortal data is
+<strong>cBioPortalData</strong> package.</p>
+</div>
+</div>
+</div>
+<div id="cbioportaldata" class="section level1">
+<h1>cBioPortalData</h1>
+<p><img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTYiIGhlaWdodD0iMjAiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0idmVyc2lvbjogMi4xMi4wIj48dGl0bGU+dmVyc2lvbjogMi4xMi4wPC90aXRsZT48ZyBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxyZWN0IHdpZHRoPSI1MSIgaGVpZ2h0PSIyMCIgZmlsbD0iIzU1NSIvPjxyZWN0IHg9IjUxIiB3aWR0aD0iNDUiIGhlaWdodD0iMjAiIGZpbGw9IiMwMDdlYzYiLz48L2c+PGcgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlZlcmRhbmEsR2VuZXZhLERlamFWdSBTYW5zLHNhbnMtc2VyaWYiIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIGZvbnQtc2l6ZT0iMTEwIj48dGV4dCB4PSIyNjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIGZpbGw9IiNmZmYiIHRleHRMZW5ndGg9IjQxMCI+dmVyc2lvbjwvdGV4dD48dGV4dCB4PSI3MjUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIGZpbGw9IiNmZmYiIHRleHRMZW5ndGg9IjM1MCI+Mi4xMi4wPC90ZXh0PjwvZz48L3N2Zz4=" />
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTgiIGhlaWdodD0iMjAiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0icmFuazogMzA4LzIyNjYiPjx0aXRsZT5yYW5rOiAzMDgvMjI2NjwvdGl0bGU+PGcgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj48cmVjdCB3aWR0aD0iMzUiIGhlaWdodD0iMjAiIGZpbGw9IiM1NTUiLz48cmVjdCB4PSIzNSIgd2lkdGg9IjYzIiBoZWlnaHQ9IjIwIiBmaWxsPSIjMDA3ZWM2Ii8+PC9nPjxnIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJWZXJkYW5hLEdlbmV2YSxEZWphVnUgU2FucyxzYW5zLXNlcmlmIiB0ZXh0LXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIiBmb250LXNpemU9IjExMCI+PHRleHQgeD0iMTg1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiBmaWxsPSIjZmZmIiB0ZXh0TGVuZ3RoPSIyNTAiPnJhbms8L3RleHQ+PHRleHQgeD0iNjU1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiBmaWxsPSIjZmZmIiB0ZXh0TGVuZ3RoPSI1MzAiPjMwOC8yMjY2PC90ZXh0PjwvZz48L3N2Zz4=" />
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTQ4IiBoZWlnaHQ9IjIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkluIEJpb2NvbmR1Y3RvcjogNCB5ZWFycyI+PHRpdGxlPkluIEJpb2NvbmR1Y3RvcjogNCB5ZWFyczwvdGl0bGU+PGcgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj48cmVjdCB3aWR0aD0iOTciIGhlaWdodD0iMjAiIGZpbGw9IiM1NTUiLz48cmVjdCB4PSI5NyIgd2lkdGg9IjUxIiBoZWlnaHQ9IjIwIiBmaWxsPSIjYTRhNjFkIi8+PC9nPjxnIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJWZXJkYW5hLEdlbmV2YSxEZWphVnUgU2FucyxzYW5zLXNlcmlmIiB0ZXh0LXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIiBmb250LXNpemU9IjExMCI+PHRleHQgeD0iNDk1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiBmaWxsPSIjZmZmIiB0ZXh0TGVuZ3RoPSI4NzAiPkluIEJpb2NvbmR1Y3RvcjwvdGV4dD48dGV4dCB4PSIxMjE1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiBmaWxsPSIjZmZmIiB0ZXh0TGVuZ3RoPSI0MTAiPjQgeWVhcnM8L3RleHQ+PC9nPjwvc3ZnPg==" />
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkRlcGVuZHM6IFIgKCZndDs9IDQuMy4wKSI+PHRpdGxlPkRlcGVuZHM6IFIgKCZndDs9IDQuMy4wKTwvdGl0bGU+PGcgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj48cmVjdCB3aWR0aD0iNTciIGhlaWdodD0iMjAiIGZpbGw9IiM1NTUiLz48cmVjdCB4PSI1NyIgd2lkdGg9IjgzIiBoZWlnaHQ9IjIwIiBmaWxsPSIjNGMxIi8+PC9nPjxnIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJWZXJkYW5hLEdlbmV2YSxEZWphVnUgU2FucyxzYW5zLXNlcmlmIiB0ZXh0LXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIiBmb250LXNpemU9IjExMCI+PHRleHQgeD0iMjk1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiBmaWxsPSIjZmZmIiB0ZXh0TGVuZ3RoPSI0NzAiPkRlcGVuZHM8L3RleHQ+PHRleHQgeD0iOTc1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiBmaWxsPSIjZmZmIiB0ZXh0TGVuZ3RoPSI3MzAiPlIgKCZndDs9IDQuMy4wKTwvdGV4dD48L2c+PC9zdmc+" />
+<img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODYiIGhlaWdodD0iMjAiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iUGxhdGZvcm1zOiBBbGwiPjx0aXRsZT5QbGF0Zm9ybXM6IEFsbDwvdGl0bGU+PGcgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj48cmVjdCB3aWR0aD0iNjMiIGhlaWdodD0iMjAiIGZpbGw9IiM1NTUiLz48cmVjdCB4PSI2MyIgd2lkdGg9IjIzIiBoZWlnaHQ9IjIwIiBmaWxsPSIjOTdjYTAwIi8+PC9nPjxnIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJWZXJkYW5hLEdlbmV2YSxEZWphVnUgU2FucyxzYW5zLXNlcmlmIiB0ZXh0LXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIiBmb250LXNpemU9IjExMCI+PHRleHQgeD0iMzI1IiB5PSIxNDAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIiBmaWxsPSIjZmZmIiB0ZXh0TGVuZ3RoPSI1MzAiPlBsYXRmb3JtczwvdGV4dD48dGV4dCB4PSI3MzUiIHk9IjE0MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiIGZpbGw9IiNmZmYiIHRleHRMZW5ndGg9IjEzMCI+QWxsPC90ZXh0PjwvZz48L3N2Zz4=" /></p>
+<p><a href="waldronlab.io/cBioPortalData/">cBioPortal/github</a></p>
+<p><a href="https://bioconductor.org/packages/release/bioc/html/cBioPortalData.html#archives">Bioconductor.cBioPortalData.package</a></p>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>The <code>cBioPortalData</code> R package accesses cancer datasets
+from the cBio Cancer Genomics Portal. The package provides cBioPortal
+datasets as <a href="https://bioconductor.org/packages/3.19/MultiAssayExperiment">MultiAssayExperiment</a>
+objects in Bioconductor.</p>
+<p>Thanks to <a href="objects%20into%20Bioconductor.">waldronlab/cBioPortalData</a></p>
+<div id="multiassayexperiment" class="section level3">
+<h3>MultiAssayExperiment</h3>
+<p>According to <a href="https://bioconductor.org/packages/3.19/bioc/html/MultiAssayExperiment.html#:~:text=DOI%3A%2010.18129/B9.bioc.MultiAssayExperiment">Bioconductor.MultiAssayExperiment</a>,
+harmonized and managed data of multiple experimental assays performed on
+an overlapping set of specimens by MultiAssayExperiment.</p>
+</div>
+</div>
+</div>
+<div id="installation" class="section level1">
+<h1><strong>Installation</strong></h1>
+<p>To install this package in R (version &gt;= “4.3.0”),
+<code>BiocManager</code> package should be used:</p>
+<p><code>{r} BiocManager::install(&quot;cBioPortalData&quot;)</code></p>
+<p>loading package</p>
+<p><code>{r} library(cBioPortalData)</code></p>
+<p>getting the information of <em>cBioPortal</em> <em>API</em> :</p>
+<p>a list of all api datasets of studies that are available and
+currently building as <em>MultiAssayExperiment</em> representations.</p>
+<p><code>{r} cbio &lt;- cBioPortal()</code></p>
+<pre><code>service: cBioPortal
+tags(); use cbioportal$&lt;tab completion&gt;:
+# A tibble: 65 x 3
+   tag                 operation                            summary
+   &lt;chr&gt;               &lt;chr&gt;                                &lt;chr&gt;  
+ 1 Cancer Types        getAllCancerTypesUsingGET            Get al~
+ 2 Cancer Types        getCancerTypeUsingGET                Get a ~
+ 3 Clinical Attributes fetchClinicalAttributesUsingPOST     Fetch ~
+ 4 Clinical Attributes getAllClinicalAttributesInStudyUsin~ Get al~
+ 5 Clinical Attributes getAllClinicalAttributesUsingGET     Get al~
+ 6 Clinical Attributes getClinicalAttributeInStudyUsingGET  Get sp~
+ 7 Clinical Data       fetchAllClinicalDataInStudyUsingPOST Fetch ~
+ 8 Clinical Data       fetchClinicalDataUsingPOST           Fetch ~
+ 9 Clinical Data       getAllClinicalDataInStudyUsingGET    Get al~
+10 Clinical Data       getAllClinicalDataOfPatientInStudyU~ Get al~
+# i 55 more rows
+# i Use `print(n = ...)` to see more rows
+tag values:
+  Cancer Types, Clinical Attributes, Clinical Data, Copy
+  Number Segments, Discrete Copy Number Alterations, Gene
+  Panel Data, Gene Panels, Generic Assay Data, Generic
+  Assays, Genes, Info, Molecular Data, Molecular Profiles,
+  Mutations, Patients, Sample Lists, Samples, Server
+  running status, Studies, Treatments
+schemas():
+  AlleleSpecificCopyNumber, AlterationFilter,
+  AndedPatientTreatmentFilters,
+  AndedSampleTreatmentFilters, CancerStudy
+  # ... with 58 more elements</code></pre>
+<p>releasing the studies available in <em>cbio</em> and making a matrix
+of full information about all api studies including study ID :</p>
+<p><span class="math inline">\(Note\)</span> : The studies with
+<code>permission=TRUE</code> is represented.</p>
+<p><code>{r} study &lt;- getStudies(cbio)</code></p>
+<div id="studyid-selection" class="section level2">
+<h2>studyID selection</h2>
+<ul>
+<li><p>Choosing a particular cancer study with <strong>TCGA</strong>
+studyID (<a href="https://portal.gdc.cancer.gov/">GDC portal</a>). This
+function will provide sample lists of the study selected based on
+<em>cbio</em> in <em>MultiAssayExperiment</em> using
+<code>sampleLists</code> function based on <strong>TCGA</strong> study
+id. ( <em>SKCM-TCGA</em> study is an example here).</p></li>
+<li><p><em>SampleListid</em> column will be added to the table with
+study id and description.</p></li>
+</ul>
+<p><code>{r} sample &lt;- sampleLists(studyId = &quot;skcm_tcga&quot;,cbio)</code></p>
+<p><code>{r} colnames(sample)</code></p>
+<pre><code>[1] &quot;category&quot;     &quot;name&quot;         &quot;description&quot;  &quot;sampleListId&quot;
+[5] &quot;studyId&quot;  </code></pre>
+<p><code>{r} table(sample$category)</code></p>
+<pre><code>#      all_cases_in_study 
+#                                            1 
+#                      all_cases_with_cna_data 
+#                                            1 
+#              all_cases_with_methylation_data 
+#                                            2 
+#              all_cases_with_mrna_rnaseq_data 
+#                                            1 
+# all_cases_with_mutation_and_cna_and_mrna_data 
+#                                            1 
+#         all_cases_with_mutation_and_cna_data 
+#                                            1 
+#                 all_cases_with_mutation_data 
+#                                            1 
+#                     all_cases_with_rppa_data</code></pre>
+<p><span class="math inline">\(Note\)</span>: we can see variant sample
+categories for the study id including <strong>mutation
+data</strong>.</p>
 </div>
 </div>
 
