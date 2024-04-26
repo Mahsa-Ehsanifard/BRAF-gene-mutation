@@ -175,3 +175,4 @@ table(sample$category)
 
 $Note$: we can see variant sample categories for the study id including
 **mutation data**.
+
