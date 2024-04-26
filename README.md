@@ -1,10 +1,3 @@
----
-output: html_document
-editor_options: 
-  chunk_output_type: inline
-  markdown: 
-    wrap: 72
----
 
 # cBioportal
 
