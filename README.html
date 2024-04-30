@@ -482,6 +482,32 @@ study id and description.</p></li>
 <p><span class="math inline">\(Note\)</span>: we can see variant sample
 categories for the study id including <strong>mutation
 data</strong>.</p>
+<div id="downloading-a-particular-study" class="section level3">
+<h3>downloading a particular study</h3>
+<p>It allows users to download sections of the data with molecular
+profile and gene panel combinations within a study.</p>
+<pre><code>SKCM &lt;- cBioPortalData(api = cbio, studyId = &quot;skcm_tcga&quot;,by =&quot;hugoGeneSymbol&quot;,
+ 
+                       molecularProfileIds = c(&quot;skcm_tcga_mutations&quot;),
+
+                       sampleListId = &quot;skcm_tcga_3way_complete&quot;,
+ 
+                       genePanelId = &quot;IMPACT341&quot;)</code></pre>
+<pre><code>SKCM
+#&gt; A MultiAssayExperiment object of 2 listed
+#&gt; experiments with user-defined names and respective classes.
+#&gt; Containing an ExperimentList class object of length 2:
+#&gt; [1] skcm_tcga_mutations: RangedSummarizedExperiment with 3798 rows and 283 columns
+#&gt; [2] skcm_tcga_rna_seq_v2_mrna: SummarizedExperiment with 341 rows and 287 columns
+#&gt; Functionality:
+#&gt; experiments() - obtain the ExperimentList instance
+#&gt; colData() - the primary/phenotype DataFrame
+#&gt; sampleMap() - the sample coordination DataFrame
+#&gt; `$`, `[`, `[[` - extract colData columns, subset, or experiment
+#&gt; *Format() - convert into a long or wide DataFrame
+#&gt; assays() - convert ExperimentList to a SimpleList of matrices
+#&gt; exportClass() - save data to flat files</code></pre>
+</div>
 </div>
 </div>
 

@@ -176,3 +176,34 @@ table(sample$category)
 $Note$: we can see variant sample categories for the study id including
 **mutation data**.
 
+### downloading a particular study
+
+It allows users to download sections of the data with molecular profile and gene panel combinations within a study.
+
+```
+SKCM <- cBioPortalData(api = cbio, studyId = "skcm_tcga",by ="hugoGeneSymbol",
+ 
+                       molecularProfileIds = c("skcm_tcga_mutations"),
+
+                       sampleListId = "skcm_tcga_3way_complete",
+ 
+                       genePanelId = "IMPACT341")
+```
+
+```
+SKCM
+#> A MultiAssayExperiment object of 2 listed
+#> experiments with user-defined names and respective classes.
+#> Containing an ExperimentList class object of length 2:
+#> [1] skcm_tcga_mutations: RangedSummarizedExperiment with 3798 rows and 283 columns
+#> [2] skcm_tcga_rna_seq_v2_mrna: SummarizedExperiment with 341 rows and 287 columns
+#> Functionality:
+#> experiments() - obtain the ExperimentList instance
+#> colData() - the primary/phenotype DataFrame
+#> sampleMap() - the sample coordination DataFrame
+#> `$`, `[`, `[[` - extract colData columns, subset, or experiment
+#> *Format() - convert into a long or wide DataFrame
+#> assays() - convert ExperimentList to a SimpleList of matrices
+#> exportClass() - save data to flat files
+```
+
